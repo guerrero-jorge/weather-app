@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
+import { useState} from 'react';
 
 
 const Weather = ({icon,location,description,clouds,wind,temperature,pressure}) => {
