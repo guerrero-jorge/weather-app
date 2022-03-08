@@ -7,8 +7,9 @@ const Weather = ({icon,location,description,clouds,wind,temperature,pressure}) =
 
     const [state,setState]=useState(false);
 
-    let kel=Math.round(temperature-273.15);
-    console.log(kel);
+    let fahrenheit=Math.round((temperature*1.8)+32);
+    console.log(temperature)
+    console.log(fahrenheit);
 
 
     return (
@@ -28,8 +29,8 @@ const Weather = ({icon,location,description,clouds,wind,temperature,pressure}) =
  
                 </ul>
             </div>
-            <h2>{state ? kel : temperature} {state ? "°C":"°K"}</h2>
-            <button onClick={()=>setState(!state)}>Convertion {state? "°K" : "°C" } </button>
+            <h2>{state ? fahrenheit : temperature} {state ? "°F":"°C"}</h2>
+            <button onClick={()=>setState(!state)}>Convertion {state? "°C" : "°F" } </button>
 
         </div>
     );

@@ -23,7 +23,7 @@ function App() {
   
       const lat=position.coords.latitude;
       const lon=position.coords.longitude;
-      axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=dcc016d40dca7445ea0b2182d97459c0`)
+      axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=dcc016d40dca7445ea0b2182d97459c0&units=metric`)
             .then(res=>{
 
               setWeather(res.data);
